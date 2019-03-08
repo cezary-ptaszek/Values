@@ -25,11 +25,11 @@ public class Value {
         this.kolumna4 = kolumna4;
     }
 
-    public long getlId() {
+    public long getId() {
         return id;
     }
 
-    public void setlId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
