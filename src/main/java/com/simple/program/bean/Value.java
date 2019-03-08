@@ -4,65 +4,65 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "VALUES")
+@Table(name = "tabela_testowa")
 public class Value {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long lId;
-    private String sColumn1;
-    private String sColumn2;
-    private String sColumn3;
-    private Long lColumn4;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String kolumna1;
+    private String kolumna2;
+    private String kolumna3;
+    private Long kolumna4;
 
     public Value() {}
 
-    public Value(Long lId, String sColumn1, String sColumn2, String sColumn3, Long lColumn4) {
-        this.lId = lId;
-        this.sColumn1 = sColumn1;
-        this.sColumn2 = sColumn2;
-        this.sColumn3 = sColumn3;
-        this.lColumn4 = lColumn4;
+    public Value(Long id, String kolumna1, String kolumna2, String kolumna3, Long kolumna4) {
+        this.id = id;
+        this.kolumna1 = kolumna1;
+        this.kolumna2 = kolumna2;
+        this.kolumna3 = kolumna3;
+        this.kolumna4 = kolumna4;
     }
 
     public long getlId() {
-        return lId;
+        return id;
     }
 
-    public void setlId(long lId) {
-        this.lId = lId;
+    public void setlId(long id) {
+        this.id = id;
     }
 
-    public String getsColumn1() {
-        return sColumn1;
+    public String getKolumna1() {
+        return kolumna1;
     }
 
-    public void setsColumn1(String sColumn1) {
-        this.sColumn1 = sColumn1;
+    public void setKolumna1(String kolumna1) {
+        this.kolumna1 = kolumna1;
     }
 
-    public String getsColumn2() {
-        return sColumn2;
+    public String getKolumna2() {
+        return kolumna2;
     }
 
-    public void setsColumn2(String sColumn2) {
-        this.sColumn2 = sColumn2;
+    public void setKolumna2(String kolumna2) {
+        this.kolumna2 = kolumna2;
     }
 
-    public String getsColumn3() {
-        return sColumn3;
+    public String getKolumna3() {
+        return kolumna3;
     }
 
-    public void setsColumn3(String sColumn3) {
-        this.sColumn3 = sColumn3;
+    public void setKolumna3(String kolumna3) {
+        this.kolumna3 = kolumna3;
     }
 
-    public long getlColumn4() {
-        return lColumn4;
+    public long getKolumna4() {
+        return kolumna4;
     }
 
-    public void setlColumn4(long lColumn4) {
-        this.lColumn4 = lColumn4;
+    public void setKolumna4(long kolumna4) {
+        this.kolumna4 = kolumna4;
     }
 
     @Override
@@ -70,26 +70,20 @@ public class Value {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Value value = (Value) o;
-        return lId.equals(value.lId) &&
-                Objects.equals(sColumn1, value.sColumn1) &&
-                Objects.equals(sColumn2, value.sColumn2) &&
-                Objects.equals(sColumn3, value.sColumn3) &&
-                Objects.equals(lColumn4, value.lColumn4);
+        return id.equals(value.id) &&
+                Objects.equals(kolumna1, value.kolumna1) &&
+                Objects.equals(kolumna2, value.kolumna2) &&
+                Objects.equals(kolumna3, value.kolumna3) &&
+                Objects.equals(kolumna4, value.kolumna4);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lId, sColumn1, sColumn2, sColumn3, lColumn4);
+        return Objects.hash(id, kolumna1, kolumna2, kolumna3, kolumna4);
     }
 
     @Override
     public String toString() {
-        return "Value{" +
-                "lId=" + lId +
-                ", sColumn1='" + sColumn1 + '\'' +
-                ", sColumn2='" + sColumn2 + '\'' +
-                ", sColumn3='" + sColumn3 + '\'' +
-                ", lColumn4=" + lColumn4 +
-                '}';
+        return "{" + id + kolumna1 + kolumna2 + kolumna3 + kolumna4 + "}";
     }
 }
