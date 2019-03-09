@@ -4,6 +4,7 @@
 * Java 8
 * Packaging (JAR)
 * JPA
+* PostgreSQL
 * H2
 * Thymeleaf
 * DataTables
