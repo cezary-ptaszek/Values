@@ -5,7 +5,6 @@
 * Packaging (JAR)
 * JPA
 * PostgreSQL
-* H2
 * Thymeleaf
 * DataTables
 * Intelij
