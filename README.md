@@ -8,3 +8,5 @@
 * Thymeleaf
 * DataTables
 * Intelij
+
+![](values.gif)
